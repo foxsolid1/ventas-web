@@ -1,0 +1,100 @@
+/* Header styling */
+header {
+    background-color: #ff4500;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffefd5;
+}
+
+
+
+
+.productos {
+    padding: 40px 20px;
+    background-color: white;
+  }
+  
+  .productos h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #ff4500;
+  }
+  
+  .mosaico {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .producto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+    flex-basis: 40%; /* Ancho base del producto */
+    max-width: 100%; /* Ancho máximo del producto */
+  }
+  
+  .producto:hover {
+    transform: scale(1.05);
+  }
+  
+  .producto img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .producto h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .producto p {
+    font-size: 1em;
+    color: #777;
+  }
+  
+  /* Diseño responsivo para dispositivos móviles (menos de 768px): */
+  @media screen and (max-width: 768px) {
+    .mosaico {
+      flex-direction: column; /* Productos apilados verticalmente */
+    }
+  
+    .producto {
+      flex-basis: 100%; /* Cada producto ocupa el ancho completo */
+    }
+  }
+  
