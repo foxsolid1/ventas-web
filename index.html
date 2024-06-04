@@ -16,8 +16,8 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
@@ -26,6 +26,17 @@
     
     <main>
         <section class="hero">
+            <div class="carousel">
+                <div class="slide">
+                    <img src="hero-image1.jpg" alt="Promoción 1">
+                </div>
+                <div class="slide">
+                    <img src="hero-image2.jpg" alt="Promoción 2">
+                </div>
+                <div class="slide">
+                    <img src="hero-image3.jpg" alt="Promoción 3">
+                </div>
+            </div>
             <h1>Bienvenido a Tu Negocio</h1>
             <p>Compra los mejores productos a precios accesibles</p>
         </section>
@@ -38,15 +49,42 @@
                     <h3>Producto 1</h3>
                     <p>Descripción breve del producto 1.</p>
                     <p>$10.00</p>
+                    <button onclick="location.href='productos.html'">Ver más</button>
                 </div>
                 <div class="product">
                     <img src="producto2.jpg" alt="Producto 2">
                     <h3>Producto 2</h3>
                     <p>Descripción breve del producto 2.</p>
                     <p>$20.00</p>
+                    <button onclick="location.href='productos.html'">Ver más</button>
                 </div>
                 <!-- Más productos aquí -->
             </div>
+        </section>
+        
+        <section class="testimonials">
+            <h2>Testimonios de Clientes</h2>
+            <div class="testimonial">
+                <p>"Excelente servicio y productos de alta calidad. ¡Muy recomendable!"</p>
+                <p>- Cliente Satisfecho</p>
+            </div>
+            <div class="testimonial">
+                <p>"La entrega fue rápida y el producto llegó en perfectas condiciones."</p>
+                <p>- Cliente Feliz</p>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Contacto</h2>
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
         </section>
     </main>
     
@@ -58,5 +96,7 @@
             <a href="#">Twitter</a>
         </div>
     </footer>
+
+    <script src="js/scripts.js"></script>
 </body>
 </html>
