@@ -25,8 +25,13 @@ header {
 }
 
 header .logo img {
-    height: 60px;
+    height: auto; /* Mantiene la proporción original */
+    max-height: 80px; /* Ajusta la altura máxima para que no sea demasiado grande */
+    width: auto; /* Mantiene la proporción original */
+    max-width: 100%; /* Evita que el logo se desborde */
+    object-fit: contain; /* Asegura que la imagen se ajuste bien dentro del contenedor */
 }
+
 
 nav ul {
     list-style: none;
