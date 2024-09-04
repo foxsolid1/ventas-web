@@ -227,7 +227,7 @@ nav ul li a:hover {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #f1f1f1;
+    color: black; /* Cambia el color a negro */
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
@@ -235,7 +235,7 @@ nav ul li a:hover {
 
 .close:hover,
 .close:focus {
-    color: #bbb;
+    color: #bbb; /* Color al pasar el mouse */
     text-decoration: none;
     cursor: pointer;
 }
