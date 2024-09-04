@@ -15,7 +15,7 @@ body {
 
 /* Header styling */
 header {
-    background-color: #ff4500;
+    background-color: #f10303;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -119,7 +119,7 @@ nav ul li a:hover {
     font-size: 1.2em;
 }
 
-/* Products section */
+//* Products section */
 .products {
     padding: 40px 20px;
     background-color: white;
@@ -134,19 +134,14 @@ nav ul li a:hover {
 
 .product-grid {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    justify-content: space-between; /* Espacio entre los productos */
+    gap: 20px; /* Espacio entre los productos */
 }
 
 .product {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
+    flex: 1;
     text-align: center;
-    transition: transform 0.3s;
-    cursor: pointer;
+    cursor: pointer; /* Cambia el puntero a una mano */
 }
 
 .product:hover {
@@ -182,6 +177,67 @@ nav ul li a:hover {
 
 .product button:hover {
     background-color: #ff6347;
+}
+
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption {  
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Categories section */

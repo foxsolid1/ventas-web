@@ -1,13 +1,11 @@
-let slideIndex = 0;
-showSlides();
+function openModal(src) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("img01");
+    modal.style.display = "block";
+    modalImg.src = src;
+}
 
-function showSlides() {
-    let slides = document.getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    slides[slideIndex-1].style.display = "block";  
-    setTimeout(showSlides, 3000); // Cambia de imagen cada 3 segundos
+function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
 }

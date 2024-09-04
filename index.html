@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Compra los mejores productos a precios accesibles. Entregas rápidas y seguras.">
     <meta name="keywords" content="compras en línea, tienda en línea, productos, entrega rápida, precios accesibles">
-    <meta name="author" content="Tu Nombre">
+    <meta name="author" content="Gabino Trejo Andrade">
     <title>Tu Negocio de Productos</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -31,7 +31,7 @@
                 <img src="css/imagenes/mclaren frente.jpeg" alt="Promoción 2">
                 <img src="css/imagenes/frente.jpeg" alt="Promoción 3">
             </div>
-            <h1>Bienvenido a Tu Negocio</h1>
+            <h1>Bienvenido a Track Limit</h1>
             <p>Compra los mejores productos a precios accesibles</p>
         </section>
         
@@ -39,22 +39,43 @@
             <h2>Productos Destacados</h2>
             <div class="product-grid">
                 <div class="product">
-                    <img src="producto1.jpg" alt="Producto 1">
+                    <img src="css/imagenes/Ferrari.jpeg" alt="Producto 1" onclick="openModal('css/imagenes/Ferrari.jpeg')">
                     <h3>Producto 1</h3>
                     <p>Descripción breve del producto 1.</p>
                     <p>$10.00</p>
                     <button onclick="location.href='productos.html'">Ver más</button>
                 </div>
                 <div class="product">
-                    <img src="producto2.jpg" alt="Producto 2">
+                    <img src="producto2.jpg" alt="Producto 2" onclick="openModal('producto2.jpg')">
                     <h3>Producto 2</h3>
                     <p>Descripción breve del producto 2.</p>
                     <p>$20.00</p>
                     <button onclick="location.href='productos.html'">Ver más</button>
                 </div>
-                <!-- Más productos aquí -->
+                <div class="product">
+                    <img src="producto3.jpg" alt="Producto 3" onclick="openModal('producto3.jpg')">
+                    <h3>Producto 3</h3>
+                    <p>Descripción breve del producto 3.</p>
+                    <p>$30.00</p>
+                    <button onclick="location.href='productos.html'">Ver más</button>
+                </div>
+                <div class="product">
+                    <img src="producto4.jpg" alt="Producto 4" onclick="openModal('producto4.jpg')">
+                    <h3>Producto 4</h3>
+                    <p>Descripción breve del producto 4.</p>
+                    <p>$40.00</p>
+                    <button onclick="location.href='productos.html'">Ver más</button>
+                </div>
             </div>
         </section>
+        
+        
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
         
         <section class="testimonials">
             <h2>Testimonios de Clientes</h2>
@@ -94,3 +115,4 @@
     <script src="js/scripts.js"></script>
 </body>
 </html>
+
