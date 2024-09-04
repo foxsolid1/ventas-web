@@ -227,7 +227,7 @@ nav ul li a:hover {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: red; /* Cambia el color a negro */
+    color: #ff0000; /* Cambia el color a negro */
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
