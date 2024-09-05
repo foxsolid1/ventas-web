@@ -76,7 +76,7 @@ nav ul li a:hover {
     position: relative;
     text-align: center;
     padding: 100px 20px;
-    background-color: #ffefd5;
+    background-color: white;
 }
 
 .carousel {
@@ -119,7 +119,7 @@ nav ul li a:hover {
     font-size: 1.2em;
 }
 
-//* Products section */
+/* Products section */
 .products {
     padding: 40px 20px;
     background-color: white;
