@@ -134,12 +134,14 @@ nav ul li a:hover {
 
 .product-grid {
     display: flex;
-    justify-content: space-between; /* Espacio entre los productos */
+    flex-wrap: wrap; /* Permite que los productos pasen a la siguiente fila */
+    justify-content: center; /* Centra los productos en la fila */
     gap: 20px; /* Espacio entre los productos */
 }
 
 .product {
-    flex: 1;
+    flex: 1 1 calc(33.33% - 20px); /* Los productos ocupan un tercio del ancho disponible */
+    max-width: calc(33.33% - 20px); /* Ancho máximo para que mantenga 3 productos en la primera fila */
     text-align: center;
     cursor: pointer; /* Cambia el puntero a una mano */
 }
@@ -178,6 +180,14 @@ nav ul li a:hover {
 .product button:hover {
     background-color: #ff6347;
 }
+
+/* Ajustes específicos para el Producto 4 */
+.product-grid .product:nth-child(4) {
+    flex: 1 1 100%; /* Producto 4 ocupa toda la fila */
+    max-width: 50%; /* El Producto 4 ocupará el 50% del ancho de la fila */
+    margin: 0 auto; /* Centramos el Producto 4 */
+}
+
 
 
 /* Modal styles */
