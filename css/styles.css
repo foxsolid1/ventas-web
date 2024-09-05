@@ -77,6 +77,7 @@ nav ul li a:hover {
     text-align: center;
     padding: 100px 20px;
     background-color: white;
+    cursor: pointer; /* Cambia el puntero a una mano */
 }
 
 .carousel {
@@ -133,17 +134,14 @@ nav ul li a:hover {
 }
 
 .product-grid {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los productos pasen a la siguiente fila */
-    justify-content: center; /* Centra los productos en la fila */
-    gap: 20px; /* Espacio entre los productos */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .product {
-    flex: 1 1 calc(33.33% - 20px); /* Los productos ocupan un tercio del ancho disponible */
-    max-width: calc(33.33% - 20px); /* Ancho máximo para que mantenga 3 productos en la primera fila */
     text-align: center;
-    cursor: pointer; /* Cambia el puntero a una mano */
+    cursor: pointer;
 }
 
 .product:hover {
