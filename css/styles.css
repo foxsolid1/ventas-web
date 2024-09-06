@@ -77,23 +77,29 @@ nav ul li a:hover {
     text-align: center;
     padding: 100px 20px;
     background-color: white;
-    cursor: pointer; /* Cambia el puntero a una mano */
 }
 
 .carousel {
-    display: flex;
-    overflow: hidden;
+    position: relative;
     width: 100%; /* Ajusta el ancho del carrusel */
-    height: 300px; /* Puedes ajustar la altura según tus necesidades */
-    margin-bottom: 20px;
+    height: 300px; /* Ajusta la altura del carrusel */
+    overflow: hidden;
 }
 
-
-
 .carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
     height: 100%; /* Asegura que la imagen ocupe todo el alto del contenedor */
-    object-fit: cover; /* Mantiene la proporción de la imagen y llena el contenedor */
+    object-fit: contain; /* Ajusta la imagen para que se vea completa sin recortar */
+    opacity: 0; /* Oculta la imagen por defecto */
+    transition: opacity 1s ease-in-out; /* Suaviza la transición entre imágenes */
+    background-color: #fff; /* Agrega un fondo blanco si la imagen no llena el espacio */
+}
+
+.carousel img.active {
+    opacity: 1; /* Muestra la imagen activa */
 }
 
 /* Estilos para las imágenes en fila */
