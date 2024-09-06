@@ -106,8 +106,10 @@ nav ul li a:hover {
     height: 100%;
     object-fit: contain;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Transición de ambos */
     background-color: #fff;
+    background-color: #f0f0f0; /* Color inicial */
+transition: background-color 1s ease-in-out;
 }
 
 .carousel img.active {
