@@ -18,8 +18,8 @@ header {
     background-color: #f10303;
     color: white;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    align-items: center; /* Centra el contenido */
     padding: 15px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -53,10 +53,12 @@ header .logo img {
 nav ul {
     list-style: none;
     display: flex;
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    align-items: center; /* Centra los elementos */
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin: 10px 0; /* Espaciado vertical en lugar de horizontal */
 }
 
 nav ul li a {
@@ -70,11 +72,20 @@ nav ul li a:hover {
     color: #ffefd5;
 }
 
+@media (min-width: 600px) {
+    nav ul {
+        flex-direction: row; /* Vuelve a fila en pantallas más grandes */
+    }
+    nav ul li {
+        margin: 0 20px; /* Espaciado horizontal */
+    }
+}
+
 /* Hero section with carousel */
 .hero {
     position: relative;
     text-align: center;
-    padding: 100px 20px;
+    padding: 50px 20px; /* Reduce el padding en pantallas más pequeñas */
     background-color: red;
     color: white;
 }
@@ -103,9 +114,18 @@ nav ul li a:hover {
     opacity: 1;
 }
 
+/* Hero h1 styling */
+.hero h1 {
+    font-size: 2.5em; /* Ajustar tamaño de fuente */
+}
+
+.hero p {
+    font-size: 1em; /* Ajustar tamaño de fuente */
+}
+
 /* Products section */
 .products {
-    padding: 40px 20px;
+    padding: 20px; /* Reduce el padding en pantallas más pequeñas */
     background-color: white;
 }
 
@@ -118,8 +138,8 @@ nav ul li a:hover {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajustar para pantallas pequeñas */
+    gap: 10px; /* Reduce el gap entre productos */
 }
 
 .product {
@@ -193,73 +213,14 @@ nav ul li a:hover {
     position: absolute;
     top: 10px;
     right: 20px;
-    color: white;
+    color: red; /* Cambiado a color rojo */
     font-size: 30px;
     cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Hero h1 styling */
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2em;
-}
-
-/* Categories section */
-.categories {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-}
-
-.categories h2 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #ff4500;
-}
-
-.category-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.category {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s;
-    width: calc(33% - 20px);
-    cursor: pointer;
-}
-
-.category:hover {
-    transform: scale(1.05);
-}
-
-.category img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.category h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
+    color: #ff6347; /* Color al pasar el ratón */
 }
 
 /* Testimonials section */
@@ -306,6 +267,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%; /* Asegúrate de que el formulario use todo el ancho */
 }
 
 .contact label {
@@ -316,8 +278,8 @@ nav ul li a:hover {
 
 .contact input,
 .contact textarea {
-    width: 100%;
-    max-width: 600px;
+    width: 90%; /* Ajusta el ancho */
+    max-width: 400px; /* Asegúrate de que no sea demasiado ancho */
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -362,15 +324,29 @@ footer .social-media a:hover {
     color: #ff4500;
 }
 
-/* Estilos para la "X" de cierre del modal */
-.modal .close {
-    color: red; /* O usa "green" si prefieres */
-    font-size: 24px; /* Aumenta el tamaño de la "X" */
-    font-weight: bold;
-    cursor: pointer;
-}
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2em; /* Ajusta el tamaño del texto en la sección hero */
+    }
 
-.modal .close:hover {
-    color: darkred; /* Color más oscuro al pasar el cursor */
-}
+    .hero p {
+        font-size: 0.9em; /* Ajusta el tamaño del texto en la sección hero */
+    }
 
+    .product h3 {
+        font-size: 1.2em; /* Ajusta el tamaño del texto del producto */
+    }
+
+    .product p {
+        font-size: 0.9em; /* Ajusta el tamaño del texto del producto */
+    }
+
+    .contact h2 {
+        font-size: 2em; /* Ajusta el tamaño del texto de contacto */
+    }
+
+    .contact label {
+        font-size: 1em; /* Ajusta el tamaño del texto de las etiquetas */
+    }
+}
