@@ -1,20 +1,38 @@
-function openModal(src) {
+function openModal(src1, src2) {
     var modal = document.getElementById("myModal");
     var modalImg = document.getElementById("img01");
     modal.style.display = "block";
-    modalImg.src = src;
+
+    // Arreglo de imágenes para alternar
+    let images = [src1, src2];
+    let currentImageIndex = 0;
+
+    // Muestra la primera imagen
+    modalImg.src = images[currentImageIndex];
+
+    // Cambia la imagen automáticamente cada 3 segundos
+    const imageInterval = setInterval(() => {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        modalImg.src = images[currentImageIndex];
+    }, 3000);
+
+    // Guarda el intervalo en el modal para poder detenerlo al cerrar
+    modal.dataset.imageInterval = imageInterval;
 }
 
 function closeModal() {
     var modal = document.getElementById("myModal");
     modal.style.display = "none";
+
+    // Detén el intervalo para que no siga cambiando las imágenes después de cerrar el modal
+    clearInterval(modal.dataset.imageInterval);
 }
 
 // Selecciona todas las imágenes del carrusel
 const images = document.querySelectorAll('.carousel img');
 let currentIndex = 0; // Índice de la imagen actual
 
-// Función para cambiar de imagen
+// Función para cambiar de imagen en el carrusel principal
 function changeImage() {
     // Oculta la imagen actual
     images[currentIndex].classList.remove('active');
@@ -26,7 +44,7 @@ function changeImage() {
     images[currentIndex].classList.add('active');
 }
 
-// Inicia el carrusel, cambia de imagen cada 10 segundos
+// Inicia el carrusel principal, cambia de imagen cada 10 segundos
 setInterval(changeImage, 10000);
 
 // Muestra la primera imagen al cargar la página

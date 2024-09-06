@@ -27,11 +27,10 @@
     <main>
         <section class="hero">
             <div class="carousel">
-                <img src="css/imagenes/ferrari 1.jpeg" alt="Promoción 1">
+                <img class="active" src="css/imagenes/ferrari 1.jpeg" alt="Promoción 1">
                 <img src="css/imagenes/frente.jpeg" alt="Promoción 2">
                 <img src="css/imagenes/mclaren frente.jpeg" alt="Promoción 3">
             </div>
-        </section>
             <h1>Bienvenido a Track Limit</h1>
             <p>Compra los mejores productos a precios accesibles</p>
         </section>
@@ -39,57 +38,57 @@
         <section class="products">
             <h2>Productos Destacados</h2>
             <div class="product-grid">
-                <div class="product">
-                    <img src="css/imagenes/taparosca.jpeg" alt="Producto 1" onclick="openModal('css/imagenes/taparosca.jpeg')">
+                <div class="product" onclick="openModal('css/imagenes/taparosca.jpeg')">
+                    <img src="css/imagenes/taparosca.jpeg" alt="Producto 1">
                     <h3>Producto 1</h3>
                     <p>Descripción breve del producto 1.</p>
                     <p>$10.00</p>
                     <button onclick="location.href='productos.html'">Ver más</button>
                 </div>
-                <div class="product">
-                    <img src="css/imagenes/taza.jpeg" alt="Producto 2" onclick="openModal('css/imagenes/taza.jpeg')">
+                <div class="product" onclick="openModal('css/imagenes/taza.jpeg')">
+                    <img src="css/imagenes/taza.jpeg" alt="Producto 2">
                     <h3>Producto 2</h3>
                     <p>Descripción breve del producto 2.</p>
                     <p>$20.00</p>
                     <button onclick="location.href='productos.html'">Ver más</button>
                 </div>
-                <div class="product">
-                    <img src="css/imagenes/producto3.jpeg" alt="Producto 3" onclick="openModal('css/imagenes/producto3.jpeg')">
+                <div class="product" onclick="openModal('css/imagenes/producto3.jpeg')">
+                    <img src="css/imagenes/producto3.jpeg" alt="Producto 3">
                     <h3>Producto 3</h3>
                     <p>Descripción breve del producto 3.</p>
                     <p>$30.00</p>
                     <button onclick="location.href='productos.html'">Ver más</button>
                 </div>
-                <div class="product">
-                    <img src="css/imagenes/producto4.jpeg" alt="Producto 4" onclick="openModal('css/imagenes/producto4.jpeg')">
+                <div class="product" onclick="openModal('css/imagenes/producto4.jpeg')">
+                    <img src="css/imagenes/producto4.jpeg" alt="Producto 4">
                     <h3>Producto 4</h3>
                     <p>Descripción breve del producto 4.</p>
                     <p>$40.00</p>
                     <button onclick="location.href='productos.html'">Ver más</button>
                 </div>
-                <div class="product">
-                    <img src="css/imagenes/producto5.jpeg" alt="Producto 5" onclick="openModal('css/imagenes/producto5.jpeg')">
+                <div class="product" onclick="openModal('css/imagenes/producto5.jpeg')">
+                    <img src="css/imagenes/producto5.jpeg" alt="Producto 5">
                     <h3>Producto 5</h3>
                     <p>Descripción breve del producto 5.</p>
                     <p>$50.00</p>
                     <button onclick="location.href='productos.html'">Ver más</button>
                 </div>
-                <div class="product">
-                    <img src="css/imagenes/producto6.jpeg" alt="Producto 6" onclick="openModal('css/imagenes/producto6.jpeg')">
+                <div class="product" onclick="openModal('css/imagenes/producto6.jpeg')">
+                    <img src="css/imagenes/producto6.jpeg" alt="Producto 6">
                     <h3>Producto 6</h3>
                     <p>Descripción breve del producto 6.</p>
                     <p>$60.00</p>
                     <button onclick="location.href='productos.html'">Ver más</button>
                 </div>
-                <div class="product">
-                    <img src="css/imagenes/producto7.jpeg" alt="Producto 7" onclick="openModal('css/imagenes/producto7.jpeg')">
+                <div class="product" onclick="openModal('css/imagenes/producto7.jpeg')">
+                    <img src="css/imagenes/producto7.jpeg" alt="Producto 7">
                     <h3>Producto 7</h3>
                     <p>Descripción breve del producto 7.</p>
                     <p>$70.00</p>
                     <button onclick="location.href='productos.html'">Ver más</button>
                 </div>
-                <div class="product">
-                    <img src="css/imagenes/producto8.jpeg" alt="Producto 8" onclick="openModal('css/imagenes/producto8.jpeg')">
+                <div class="product" onclick="openModal('css/imagenes/producto8.jpeg')">
+                    <img src="css/imagenes/producto8.jpeg" alt="Producto 8">
                     <h3>Producto 8</h3>
                     <p>Descripción breve del producto 8.</p>
                     <p>$80.00</p>
@@ -98,13 +97,12 @@
             </div>
         </section>
         
-        
-        
-        <!-- Modal -->
-        <div id="myModal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="img01">
-            <div id="caption"></div>
+        <!-- Modal para mostrar el producto ampliado -->
+        <div id="productModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modalImage" src="" alt="Imagen del producto">
+            </div>
         </div>
         
         <section class="testimonials">
@@ -143,6 +141,22 @@
     </footer>
 
     <script src="js/scripts.js"></script>
+
+    <script>
+        // Función para abrir el modal con la imagen ampliada
+        function openModal(imageSrc) {
+            const modal = document.getElementById("productModal");
+            const modalImage = document.getElementById("modalImage");
+            modalImage.src = imageSrc;
+            modal.style.display = "flex";
+        }
+
+        // Función para cerrar el modal
+        function closeModal() {
+            const modal = document.getElementById("productModal");
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
 
