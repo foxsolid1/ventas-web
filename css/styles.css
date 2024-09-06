@@ -215,10 +215,10 @@ nav ul li a:hover {
 /* Botón de cerrar */
 .close {
     position: absolute;
-    top: 20px; /* Ajusta según sea necesario */
+    top: -150px; /* Ajusta según sea necesario */
     right: 20px; /* Ajusta según sea necesario */
     color: red; /* Color rojo */
-    font-size: 30px;
+    font-size: 100px;
     cursor: pointer;
     z-index: 1000; /* Asegúrate de que esté por encima de la imagen */
 }
