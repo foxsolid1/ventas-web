@@ -76,14 +76,16 @@ nav ul li a:hover {
     position: relative;
     text-align: center;
     padding: 100px 20px;
-    background-color: white;
+    background-color: red; /* Fondo rojo para la sección */
+    color: white; /* Cambia el color del texto a blanco para que resalte sobre el fondo rojo */
 }
 
 .carousel {
-    position: relative;
-    width: 100%; /* Ajusta el ancho del carrusel */
-    height: 300px; /* Ajusta la altura del carrusel */
+    display: flex;
     overflow: hidden;
+    width: 100%; /* Ajusta el ancho del carrusel */
+    height: 300px; /* Puedes ajustar la altura según tus necesidades */
+    margin-bottom: 20px;
 }
 
 .carousel img {
@@ -125,6 +127,8 @@ nav ul li a:hover {
 .hero p {
     font-size: 1.2em;
 }
+
+
 
 /* Products section */
 .products {
