@@ -106,14 +106,14 @@ nav ul li a:hover {
     height: 100%;
     object-fit: contain;
     opacity: 0;
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Transición de ambos */
+    transform: scale(1) translateY(0); /* Posición inicial */
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out, background-color 0.8s ease-in-out;
     background-color: #fff;
-    background-color: #f0f0f0; /* Color inicial */
-transition: background-color 1s ease-in-out;
 }
 
 .carousel img.active {
-    opacity: 1;
+    opacity: 1; /* Se va haciendo visible */
+    transform: scale(1.05) translateY(-5px); /* Ligero aumento y desplazamiento hacia arriba */
 }
 
 /* Hero h1 styling */
