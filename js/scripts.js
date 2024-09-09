@@ -1,3 +1,27 @@
+let currentSlide = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.product');
+    const totalSlides = slides.length;
+    if (index >= totalSlides) currentSlide = 0;
+    if (index < 0) currentSlide = totalSlides - 1;
+    const offset = -currentSlide * 100; // Mueve el contenedor
+    document.querySelector('.product-slider').style.transform = `translateX(${offset}%)`;
+}
+
+function nextSlide() {
+    currentSlide++;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide--;
+    showSlide(currentSlide);
+}
+
+// Inicializa la primera slide visible
+showSlide(currentSlide);
+
 function openModal(src1, src2) {
     var modal = document.getElementById("myModal");
     var modalImg = document.getElementById("img01");
