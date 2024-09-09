@@ -14,7 +14,7 @@ function openModal(src1, src2) {
     const imageInterval = setInterval(() => {
         currentImageIndex = (currentImageIndex + 1) % images.length;
         modalImg.src = images[currentImageIndex];
-    }, 3000);
+    },10000);
 
     // Guarda el intervalo en el modal para poder detenerlo al cerrar
     modal.dataset.imageInterval = imageInterval;
@@ -44,8 +44,8 @@ function changeImage() {
     images[currentIndex].classList.add('active');
 }
 
-// Inicia el carrusel principal, cambia de imagen cada 10 segundos
-setInterval(changeImage, 10000);
+// Inicia el carrusel principal, cambia de imagen cada 5 segundos
+setInterval(changeImage, 5000);
 
 // Muestra la primera imagen al cargar la página
 images[currentIndex].classList.add('active');
