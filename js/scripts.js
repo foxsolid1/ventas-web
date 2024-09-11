@@ -83,13 +83,6 @@ document.querySelector('.close-image-modal').addEventListener('click', closeImag
 function openModal(thumbnail) {
     var modal = document.getElementById("myModal");
     var modalImg = document.getElementById("img01");
-    modal.style.display = "block";
-
-    // Usa el src de la miniatura seleccionada
+    modal.style.display = "flex"; // Asegúrate de que esté en modo flex
     modalImg.src = thumbnail.src; 
 }
-
-
-
-
-
