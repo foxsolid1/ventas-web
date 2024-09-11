@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="tu-logo.png" alt="Logo de Tu Negocio">
+            <img src="css/imagenes/logo.jpeg" alt="Logo de Tu Negocio">
         </div>
         <nav>
             <ul>
@@ -28,61 +28,118 @@
         <section class="products">
             <h2>Todos los Productos</h2>
             <div class="product-grid">
+                <!-- Producto 1 -->
                 <div class="product">
-                    <img src="producto1.jpg" alt="Producto 1">
+                    <div class="product-images">
+                        <img src="css/imagenes/Ferrari.jpeg" alt="Producto 1 - Principal" class="main-image">
+                        <div class="product-images">
+                            <img src="css/imagenes/Ferrari.jpeg" alt="Producto 1 - Detalle 1" class="thumbnail" onclick="openModal(this)">
+                            <img src="css/imagenes/frente reverso.jpeg" alt="Producto 1 - Detalle 2" class="thumbnail" onclick="openModal(this)">
+                            <img src="css/imagenes/mclaren frente.jpeg" alt="Producto 1 - Detalle 3" class="thumbnail" onclick="openModal(this)">
+                        </div>
+                    </div>
                     <h3>Producto 1</h3>
                     <p>Descripción detallada del producto 1.</p>
                     <p>$10.00</p>
                     <button>Comprar</button>
                 </div>
+        
+                <!-- Producto 2 -->
                 <div class="product">
-                    <img src="producto2.jpg" alt="Producto 2">
+                    <div class="product-images">
+                        <img src="producto2_main.jpg" alt="Producto 2 - Principal" class="main-image">
+                        <div class="thumbnails">
+                            <img src="producto2_1.jpg" alt="Producto 2 - Detalle 1" class="thumbnail">
+                            <img src="producto2_2.jpg" alt="Producto 2 - Detalle 2" class="thumbnail">
+                            <img src="producto2_3.jpg" alt="Producto 2 - Detalle 3" class="thumbnail">
+                        </div>
+                    </div>
                     <h3>Producto 2</h3>
                     <p>Descripción detallada del producto 2.</p>
                     <p>$20.00</p>
                     <button>Comprar</button>
                 </div>
+        
+                <!-- Producto 3 -->
                 <div class="product">
-                    <img src="producto3.jpg" alt="Producto 3">
+                    <div class="product-images">
+                        <img src="producto3_main.jpg" alt="Producto 3 - Principal" class="main-image">
+                        <div class="thumbnails">
+                            <img src="producto3_1.jpg" alt="Producto 3 - Detalle 1" class="thumbnail">
+                            <img src="producto3_2.jpg" alt="Producto 3 - Detalle 2" class="thumbnail">
+                            <img src="producto3_3.jpg" alt="Producto 3 - Detalle 3" class="thumbnail">
+                        </div>
+                    </div>
                     <h3>Producto 3</h3>
                     <p>Descripción detallada del producto 3.</p>
                     <p>$30.00</p>
                     <button>Comprar</button>
                 </div>
-                <!-- Añade más productos aquí -->
+        
+                <!-- Producto 4 -->
+                <div class="product">
+                    <div class="product-images">
+                        <img src="producto4_main.jpg" alt="Producto 4 - Principal" class="main-image">
+                        <div class="thumbnails">
+                            <img src="producto4_1.jpg" alt="Producto 4 - Detalle 1" class="thumbnail">
+                            <img src="producto4_2.jpg" alt="Producto 4 - Detalle 2" class="thumbnail">
+                            <img src="producto4_3.jpg" alt="Producto 4 - Detalle 3" class="thumbnail">
+                        </div>
+                    </div>
+                    <h3>Producto 4</h3>
+                    <p>Descripción detallada del producto 4.</p>
+                    <p>$40.00</p>
+                    <button>Comprar</button>
+                </div>
+        
+                <!-- Producto 5 -->
+                <div class="product">
+                    <div class="product-images">
+                        <img src="producto5_main.jpg" alt="Producto 5 - Principal" class="main-image">
+                        <div class="thumbnails">
+                            <img src="producto5_1.jpg" alt="Producto 5 - Detalle 1" class="thumbnail">
+                            <img src="producto5_2.jpg" alt="Producto 5 - Detalle 2" class="thumbnail">
+                            <img src="producto5_3.jpg" alt="Producto 5 - Detalle 3" class="thumbnail">
+                        </div>
+                    </div>
+                    <h3>Producto 5</h3>
+                    <p>Descripción detallada del producto 5.</p>
+                    <p>$50.00</p>
+                    <button>Comprar</button>
+                </div>
+        
+                <!-- Producto 6 -->
+                <div class="product">
+                    <div class="product-images">
+                        <img src="producto6_main.jpg" alt="Producto 6 - Principal" class="main-image">
+                        <div class="thumbnails">
+                            <img src="producto6_1.jpg" alt="Producto 6 - Detalle 1" class="thumbnail">
+                            <img src="producto6_2.jpg" alt="Producto 6 - Detalle 2" class="thumbnail">
+                            <img src="producto6_3.jpg" alt="Producto 6 - Detalle 3" class="thumbnail">
+                        </div>
+                    </div>
+                    <h3>Producto 6</h3>
+                    <p>Descripción detallada del producto 6.</p>
+                    <p>$60.00</p>
+                    <button>Comprar</button>
+                </div>
             </div>
         </section>
-        <section class="categories">
-            <h2>Más Categorías</h2>
-            <div class="category-grid">
-                <div class="category">
-                    <h3>Ropa</h3>
-                    <img src="ropa.jpg" alt="Ropa">
-                </div>
-                <div class="category">
-                    <h3>Anime</h3>
-                    <img src="anime.jpg" alt="Anime">
-                </div>
-                <div class="category">
-                    <h3>Deportes</h3>
-                    <img src="deportes.jpg" alt="Deportes">
-                </div>
-                <div class="category">
-                    <h3>Electrónica</h3>
-                    <img src="electronica.jpg" alt="Electrónica">
-                </div>
-                <div class="category">
-                    <h3>Otaku</h3>
-                    <img src="otaku.jpg" alt="Otaku">
-                </div>
-                <div class="category">
-                    <h3>Sudaderas</h3>
-                    <img src="sudaderas.jpg" alt="Sudaderas">
-                </div>
-            </div>
-        </section>
-    </main>
-    
+
+        <!-- Modal de zoom de imagen -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal" style="display:none;">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="img01">
+</div>
+
+        
     <footer>
         <p>&copy; 2024 Tu Negocio de Productos. Todos los derechos reservados.</p>
         <div class="social-media">

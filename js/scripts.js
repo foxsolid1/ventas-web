@@ -1,27 +1,4 @@
-let currentSlide = 0;
-
-function showSlide(index) {
-    const slides = document.querySelectorAll('.product');
-    const totalSlides = slides.length;
-    if (index >= totalSlides) currentSlide = 0;
-    if (index < 0) currentSlide = totalSlides - 1;
-    const offset = -currentSlide * 100; // Mueve el contenedor
-    document.querySelector('.product-slider').style.transform = `translateX(${offset}%)`;
-}
-
-function nextSlide() {
-    currentSlide++;
-    showSlide(currentSlide);
-}
-
-function prevSlide() {
-    currentSlide--;
-    showSlide(currentSlide);
-}
-
-// Inicializa la primera slide visible
-showSlide(currentSlide);
-
+// Abre el modal y alterna entre dos imágenes
 function openModal(src1, src2) {
     var modal = document.getElementById("myModal");
     var modalImg = document.getElementById("img01");
@@ -34,42 +11,85 @@ function openModal(src1, src2) {
     // Muestra la primera imagen
     modalImg.src = images[currentImageIndex];
 
-    // Cambia la imagen automáticamente cada 3 segundos
+    // Cambia la imagen automáticamente cada 5 segundos
     const imageInterval = setInterval(() => {
         currentImageIndex = (currentImageIndex + 1) % images.length;
         modalImg.src = images[currentImageIndex];
-    },10000);
+    }, 5000); // 5000 milisegundos = 5 segundos
 
-    // Guarda el intervalo en el modal para poder detenerlo al cerrar
-    modal.dataset.imageInterval = imageInterval;
+    // Guarda el ID del intervalo en una propiedad del modal
+    modal.imageInterval = imageInterval;
 }
 
+// Cierra el modal y detiene el cambio de imágenes
 function closeModal() {
     var modal = document.getElementById("myModal");
     modal.style.display = "none";
 
-    // Detén el intervalo para que no siga cambiando las imágenes después de cerrar el modal
-    clearInterval(modal.dataset.imageInterval);
+    // Detiene el intervalo para evitar que siga cambiando las imágenes
+    if (modal.imageInterval) {
+        clearInterval(modal.imageInterval);
+        modal.imageInterval = null;
+    }
 }
 
-// Selecciona todas las imágenes del carrusel
+// Función para cambiar de imagen en el carrusel principal
 const images = document.querySelectorAll('.carousel img');
 let currentIndex = 0; // Índice de la imagen actual
 
-// Función para cambiar de imagen en el carrusel principal
 function changeImage() {
-    // Oculta la imagen actual
     images[currentIndex].classList.remove('active');
-
-    // Actualiza el índice de la imagen
     currentIndex = (currentIndex + 1) % images.length;
-
-    // Muestra la nueva imagen
     images[currentIndex].classList.add('active');
 }
 
-// Inicia el carrusel principal, cambia de imagen cada 5 segundos
-setInterval(changeImage, 5000);
-
-// Muestra la primera imagen al cargar la página
+// Inicia el carrusel principal, cambia de imagen cada 10 segundos
+setInterval(changeImage, 10000);
 images[currentIndex].classList.add('active');
+
+// Galería de Imágenes Simple con Miniaturas
+const thumbnails = document.querySelectorAll('.thumbnail');
+const mainImage = document.querySelector('.main-image');
+
+thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', function() {
+        mainImage.src = this.src; // Cambia la imagen principal por la seleccionada
+        openImageModal(this); // Abre el modal para la imagen ampliada
+    });
+});
+
+// Modal para mostrar la imagen ampliada
+function openImageModal(thumbnail) {
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("modalImg");
+    var captionText = document.getElementById("caption");
+
+    modal.style.display = "block";
+    modalImg.src = thumbnail.src;
+    captionText.innerHTML = thumbnail.alt; // Muestra la descripción de la imagen
+}
+
+// Cierra el modal de imagen ampliada
+function closeImageModal() {
+    var modal = document.getElementById("imageModal");
+    modal.style.display = "none";
+}
+
+// Evento para cerrar el modal al hacer clic en la cruz
+document.querySelector('.close').addEventListener('click', closeModal);
+document.querySelector('.close-image-modal').addEventListener('click', closeImageModal);
+
+// Abre el modal y muestra la imagen seleccionada
+function openModal(thumbnail) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("img01");
+    modal.style.display = "block";
+
+    // Usa el src de la miniatura seleccionada
+    modalImg.src = thumbnail.src; 
+}
+
+
+
+
+

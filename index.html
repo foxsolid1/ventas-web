@@ -12,71 +12,41 @@
 <body>
     <header>
         <div class="logo">
-            <img src="css/imagenes/logo.jpeg" alt="Logo de Track Limit">
+            <img src="css/imagenes/logo.jpeg" alt="Logo de Track Limit" class="responsive-logo">
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="index.html" aria-label="Ir al Inicio">Inicio</a></li>
+                <li><a href="productos.html" aria-label="Ver productos">Productos</a></li>
+                <li><a href="#" aria-label="Saber más sobre nosotros">Nosotros</a></li>
+                <li><a href="#" aria-label="Contactarnos">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <section class="hero">
             <div class="carousel">
-                <img class="active" src="css/imagenes/ferrari 1.jpeg" alt="Promoción 1">
-                <img src="css/imagenes/frente.jpeg" alt="Promoción 2">
-                 <img src="css/imagenes/mclaren_carusel.jpeg" alt="Promoción 3">
-                <img src="css/imagenes/mclaren frente.jpeg" alt="Promoción 4">
-               
+                <img class="active" src="css/imagenes/ferrari 1.jpeg" alt="Promoción 1" loading="lazy">
+                <img src="css/imagenes/frente.jpeg" alt="Promoción 2" loading="lazy">
+                <img src="css/imagenes/mclaren_carusel.jpeg" alt="Promoción 3" loading="lazy">
+                <img src="css/imagenes/mclaren frente.jpeg" alt="Promoción 4" loading="lazy">
             </div>
         </section>
-        
-        <section class="products">
-            <h2>Productos Destacados</h2>
-            <div class="product-carousel">
-                <button class="prev" onclick="prevSlide()">&#10094;</button>
-                <div class="product-slider">
-                    <div class="product">
-                        <img src="css/imagenes/taparosca.jpeg" alt="Producto 1">
-                        <h3>Producto 1</h3>
-                        <p>Descripción breve del producto 1.</p>
-                        <p>$10.00</p>
-                        <button onclick="location.href='productos.html'">Ver más</button>
-                    </div>
-                    <div class="product">
-                        <img src="css/imagenes/frente.jpeg" alt="Producto 2">
-                        <h3>Producto 2</h3>
-                        <p>Descripción breve del producto 2.</p>
-                        <p>$20.00</p>
-                        <button onclick="location.href='productos.html'">Ver más</button>
-                    </div>
-                    <!-- Más productos aquí... -->
-                </div>
-                <button class="next" onclick="nextSlide()">&#10095;</button>
-            </div>
-        </section>
-        
-        <!-- Modal para mostrar el producto ampliado -->
-<div id="productModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span> <!-- Mantenido fuera de la imagen -->
-        <img id="modalImage" src="" alt="Imagen del producto">
-    </div>
-</div>
-        
+
         <section class="testimonials">
             <h2>Testimonios de Clientes</h2>
             <div class="testimonial">
-                <p>"Excelente servicio y productos de alta calidad. ¡Muy recomendable!"</p>
-                <p>- Cliente Satisfecho</p>
+                <blockquote>
+                    <p>"Excelente servicio y productos de alta calidad. ¡Muy recomendable!"</p>
+                    <cite>- Cliente Satisfecho</cite>
+                </blockquote>
             </div>
             <div class="testimonial">
-                <p>"La entrega fue rápida y el producto llegó en perfectas condiciones."</p>
-                <p>- Cliente Feliz</p>
+                <blockquote>
+                    <p>"La entrega fue rápida y el producto llegó en perfectas condiciones."</p>
+                    <cite>- Cliente Feliz</cite>
+                </blockquote>
             </div>
         </section>
 
@@ -93,13 +63,13 @@
             </form>
         </section>
     </main>
-    
+
     <footer>
         <p>&copy; 2024 Tu Negocio de Productos. Todos los derechos reservados.</p>
         <div class="social-media">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
+            <a href="#" aria-label="Visítanos en Facebook">Facebook</a>
+            <a href="#" aria-label="Visítanos en Instagram">Instagram</a>
+            <a href="#" aria-label="Visítanos en Twitter">Twitter</a>
         </div>
     </footer>
 

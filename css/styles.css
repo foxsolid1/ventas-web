@@ -1,134 +1,141 @@
 /* Resetting some default styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Elimina el margen por defecto de todos los elementos */
+    padding: 0; /* Elimina el relleno por defecto de todos los elementos */
+    box-sizing: border-box; /* Incluye los bordes y rellenos en las medidas totales de los elementos */
 }
 
 /* General body styles */
 body {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    background-color: #f5f5f5;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif; /* Fuente por defecto del cuerpo */
+    color: #333; /* Color de texto principal */
+    background-color: #f5f5f5; /* Color de fondo del cuerpo */
+    line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
 }
 
 /* Header styling */
 header {
-    background-color: #f10303;
-    color: white;
-    display: flex;
-    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-    align-items: center; /* Centra el contenido */
-    padding: 15px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f10303; /* Color de fondo del encabezado */
+    color: white; /* Color del texto del encabezado */
+    display: flex; /* Usa un flexbox para distribuir los elementos */
+    flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+    align-items: center; /* Centra el contenido horizontalmente */
+    padding: 15px 20px; /* Añade espacio interno alrededor del contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil al encabezado */
 }
 
 header .logo img {
-    height: auto;
-    max-height: 80px;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
+    height: auto; /* Altura automática para mantener la proporción de la imagen */
+    max-height: 80px; /* Limita la altura máxima de la imagen */
+    width: auto; /* El ancho se ajusta automáticamente */
+    max-width: 100%; /* Limita el ancho máximo al 100% del contenedor */
+    object-fit: contain; /* Escala la imagen sin distorsionar */
 }
 
+/* Media query para ajustar el tamaño de la imagen del logo en pantallas grandes */
 @media (min-width: 992px) {
     header .logo img {
-        max-width: 200px;
+        max-width: 200px; /* Ajusta el tamaño del logo */
     }
 }
 
+/* Media query para pantallas medianas */
 @media (min-width: 768px) and (max-width: 991px) {
     header .logo img {
-        max-width: 150px;
+        max-width: 150px; /* Ajusta el tamaño del logo */
     }
 }
 
+/* Media query para pantallas pequeñas */
 @media (max-width: 767px) {
     header .logo img {
-        max-width: 100px;
+        max-width: 100px; /* Ajusta el tamaño del logo */
     }
 }
 
+/* Navegación del sitio */
 nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    list-style: none; /* Elimina las viñetas de la lista */
+    display: flex; /* Flexbox para alinear los elementos */
+    flex-direction: column; /* Coloca los elementos en una columna en pantallas pequeñas */
     align-items: center; /* Centra los elementos */
 }
 
 nav ul li {
-    margin: 10px 0; /* Espaciado vertical en lugar de horizontal */
+    margin: 10px 0; /* Añade espacio vertical entre los elementos */
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-weight: bold; /* Negrita para los enlaces */
+    transition: color 0.3s; /* Transición suave al cambiar de color */
 }
 
 nav ul li a:hover {
-    color: #ffefd5;
+    color: #ffefd5; /* Color de los enlaces al pasar el ratón por encima */
 }
 
+/* Media query para cambiar la disposición de la navegación en pantallas grandes */
 @media (min-width: 600px) {
     nav ul {
-        flex-direction: row; /* Vuelve a fila en pantallas más grandes */
+        flex-direction: row; /* Coloca los elementos en una fila */
     }
     nav ul li {
-        margin: 0 20px; /* Espaciado horizontal */
+        margin: 0 20px; /* Espaciado horizontal entre los elementos */
     }
 }
 
-/* Hero section with carousel */
+/* Sección de hero con carrusel */
 .hero {
-    position: relative;
-    text-align: center;
-    padding: 50px 20px; /* Reduce el padding en pantallas más pequeñas */
-    background-color: red;
-    color: white;
+    position: relative; /* Para posicionar elementos dentro del hero */
+    text-align: center; /* Centra el texto en el hero */
+    padding: 50px 20px; /* Espaciado interno */
+    background-color: red; /* Color de fondo */
+    color: white; /* Color del texto */
 }
 
+/* Contenedor del carrusel */
 .carousel {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    height: 300px;
-    margin-bottom: 20px;
+    display: flex; /* Flexbox para organizar las imágenes */
+    overflow: hidden; /* Oculta las partes que sobresalen de las imágenes */
+    width: 100%; /* Ancho completo del carrusel */
+    height: 300px; /* Altura del carrusel */
+    margin-bottom: 20px; /* Espaciado debajo del carrusel */
 }
 
 .carousel img {
-    position: absolute;
+    position: absolute; /* Posiciona las imágenes dentro del carrusel */
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0;
-    transform: scale(1) translateY(0); /* Posición inicial */
-    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out, background-color 0.8s ease-in-out;
-    background-color: #fff;
+    width: 100%; /* Ancho completo de la imagen */
+    height: 100%; /* Altura completa de la imagen */
+    object-fit: contain; /* Mantiene la proporción de la imagen sin cortarla */
+    opacity: 0; /* Inicialmente invisible */
+    transform: scale(1) translateY(0); /* Posición inicial sin transformaciones */
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out, background-color 0.8s ease-in-out; /* Transición suave en la opacidad y transformaciones */
+    background-color: #fff; /* Fondo blanco detrás de la imagen */
 }
 
 .carousel img.active {
-    opacity: 1; /* Se va haciendo visible */
-    transform: scale(1.05) translateY(-5px); /* Ligero aumento y desplazamiento hacia arriba */
+    opacity: 1; /* Hace visible la imagen activa */
+    transform: scale(1.05) translateY(-5px); /* Añade un pequeño zoom y un desplazamiento hacia arriba */
 }
 
-/* Hero h1 styling */
+/* Estilo del título en la sección hero */
 .hero h1 {
-    font-size: 2.5em; /* Ajustar tamaño de fuente */
+    font-size: 2.5em; /* Tamaño de fuente grande */
 }
 
+/* Estilo del párrafo en la sección hero */
 .hero p {
-    font-size: 1em; /* Ajustar tamaño de fuente */
+    font-size: 1em; /* Tamaño de fuente estándar */
 }
 
-/* Products section */
+/* Sección de Productos */
 .products {
-    padding: 20px; /* Reduce el padding en pantallas más pequeñas */
-    background-color: white;
+    padding: 60px 20px;
+    background-color: #f5f5f5;
 }
 
 .products h2 {
@@ -136,264 +143,225 @@ nav ul li a:hover {
     font-size: 2.5em;
     margin-bottom: 40px;
     color: #ff4500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajustar para pantallas pequeñas */
-    gap: 10px; /* Reduce el gap entre productos */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
 }
 
 .product {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
 }
 
 .product:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .product img {
     max-width: 100%;
+    height: auto;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .product h3 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-bottom: 10px;
     color: #333;
+    text-transform: capitalize;
 }
 
 .product p {
-    font-size: 1em;
+    font-size: 1.1em;
     color: #777;
+    margin-bottom: 15px;
+}
+
+.product p:last-child {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #ff4500;
+    margin-bottom: 20px;
 }
 
 .product button {
     background-color: #ff4500;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 25px;
     border-radius: 5px;
+    font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .product button:hover {
     background-color: #ff6347;
 }
 
-/* Modal styles */
+/* Galería de Imágenes Simple con Miniaturas */
+.product-images {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-images .main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 100px; /* Aumentar el tamaño de las miniaturas */
+    height: 100px; /* Aumentar el tamaño de las miniaturas */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: border 0.3s ease, transform 0.3s ease; /* Transición añadida para el zoom */
+}
+
+.thumbnail:hover {
+    border: 2px solid #ff4500;
+    transform: scale(1.1); /* Zoom al pasar el ratón */
+}
+
+.thumbnail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* CSS para el modal */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 999; /* Coloca el modal por encima de otros elementos */
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
+    width: 100%; /* Ancho completo de la pantalla */
+    height: 100%; /* Alto completo de la pantalla */
+    overflow: auto; /* Habilita el desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
 }
-
 
 .modal-content {
-    position: relative;
-    width: 80%;
-    max-width: 700px;
-    margin: auto;
+    position: relative; /* Posicionamiento relativo dentro del modal */
+    margin: auto; /* Centrando el contenido */
+    padding: 0;
+    width: 80%; /* Ancho del contenido del modal */
+    max-width: 600px; /* Ancho máximo del contenido */
 }
 
-.modal img {
-    width: 100%;
-    height: auto;
-    display: block;
+.modal-content img {
+    width: 100%; /* Ancho completo de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
 }
 
-
-
-/* Botón de cerrar */
 .close {
-    position: absolute;
-    top: -150px; /* Ajusta según sea necesario */
-    right: 20px; /* Ajusta según sea necesario */
-    color: red; /* Color rojo */
-    font-size: 100px;
-    cursor: pointer;
-    z-index: 1000; /* Asegúrate de que esté por encima de la imagen */
+    position: absolute; /* Posicionamiento absoluto para cerrar */
+    top: 15px;
+    right: 25px;
+    color: white; /* Color de la cruz de cierre */
+    font-size: 30px; /* Tamaño de la cruz de cierre */
+    font-weight: bold; /* Negrita para mayor visibilidad */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
 }
 
-.close:hover,
-.close:focus {
-    color: #ff6347; /* Color al pasar el ratón */
-}
-
-/* Testimonials section */
+/* Sección de Testimonios */
 .testimonials {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
-    text-align: center;
+    background-color: #f5f5f5; /* Color de fondo de los testimonios */
+    padding: 60px 20px; /* Espaciado interno */
 }
 
 .testimonials h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #ff4500;
+    text-align: center; /* Centra el título de los testimonios */
+    font-size: 2.5em; /* Tamaño de fuente grande */
+    margin-bottom: 40px; /* Espaciado inferior */
 }
 
 .testimonial {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px 0;
+    background-color: white; /* Fondo blanco para los testimonios */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin: 20px auto; /* Margen superior e inferior */
+    max-width: 600px; /* Ancho máximo */
+    text-align: center; /* Centra el texto */
 }
 
 .testimonial p {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #333;
+    font-style: italic; /* Cursiva para el texto */
 }
 
-/* Contact section */
+.testimonial span {
+    display: block; /* Muestra como bloque para que aparezca en una nueva línea */
+    margin-top: 10px; /* Margen superior */
+    font-weight: bold; /* Negrita */
+    color: #ff4500; /* Color */
+}
+
+/* Sección de contacto */
 .contact {
-    padding: 40px 20px;
-    background-color: #fff;
-    text-align: center;
+    padding: 60px 20px; /* Espaciado interno */
 }
 
 .contact h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #ff4500;
+    text-align: center; /* Centra el título de contacto */
+    font-size: 2.5em; /* Tamaño de fuente */
+    margin-bottom: 40px; /* Espaciado inferior */
 }
 
+/* Estilo del formulario */
 .contact form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; /* Asegúrate de que el formulario use todo el ancho */
+    display: flex; /* Flexbox para alinear los elementos */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centra el formulario */
 }
 
 .contact label {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #333;
+    margin-bottom: 10px; /* Espaciado inferior para las etiquetas */
 }
 
-.contact input,
-.contact textarea {
-    width: 90%; /* Ajusta el ancho */
-    max-width: 400px; /* Asegúrate de que no sea demasiado ancho */
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.contact input, .contact textarea {
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espaciado inferior entre campos */
 }
 
 .contact button {
-    background-color: #ff4500;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    background-color: #ff4500; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 25px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño de fuente del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave */
 }
 
 .contact button:hover {
-    background-color: #ff6347;
-}
-
-/* Footer styling */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    margin-bottom: 10px;
-}
-
-footer .social-media a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s;
-}
-
-footer .social-media a:hover {
-    color: #ff4500;
-}
-
-/* Media Queries para pantallas más pequeñas */
-@media (max-width: 600px) {
-    .hero h1 {
-        font-size: 2em; /* Ajusta el tamaño del texto en la sección hero */
-    }
-
-    .hero p {
-        font-size: 0.9em; /* Ajusta el tamaño del texto en la sección hero */
-    }
-
-    .product h3 {
-        font-size: 1.2em; /* Ajusta el tamaño del texto del producto */
-    }
-
-    .product p {
-        font-size: 0.9em; /* Ajusta el tamaño del texto del producto */
-    }
-
-    .contact h2 {
-        font-size: 2em; /* Ajusta el tamaño del texto de contacto */
-    }
-
-    .contact label {
-        font-size: 1em; /* Ajusta el tamaño del texto de las etiquetas */
-    }
-}
-
-.product-carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.product-slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.product {
-    min-width: 100%;
-    box-sizing: border-box;
-}
-
-button.prev, button.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-button.prev {
-    left: 0;
-}
-
-button.next {
-    right: 0;
-}
-
-button.prev:hover, button.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #ff6347; /* Color de fondo al pasar el ratón por encima */
 }
