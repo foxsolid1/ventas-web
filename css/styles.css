@@ -262,14 +262,15 @@ nav ul li a:hover {
     height: 100%; /* Alto completo de la pantalla */
     overflow: auto; /* Habilita el desplazamiento si es necesario */
     background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    justify-content: center;  /*Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    
 }
 
 .modal-content {
-    position: relative; /* Posicionamiento relativo dentro del modal */
-    margin: auto; /* Centrando el contenido */
-    padding: 0;
-    width: 80%; /* Ancho del contenido del modal */
-    max-width: 600px; /* Ancho máximo del contenido */
+    max-width: 90%; /* Ajusta el tamaño máximo de la imagen */
+    max-height: 90%; /* Ajusta la altura máxima de la imagen */
+    margin: auto; /* Centra la imagen */
 }
 
 .modal-content img {
