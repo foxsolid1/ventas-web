@@ -86,3 +86,8 @@ function openModal(thumbnail) {
     modal.style.display = "flex"; // Asegúrate de que esté en modo flex
     modalImg.src = thumbnail.src; 
 }
+
+
+
+
+
