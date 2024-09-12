@@ -3,92 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Compra los mejores productos a precios accesibles. Entregas rápidas y seguras.">
-    <meta name="keywords" content="compras en línea, tienda en línea, productos, entrega rápida, precios accesibles">
-    <meta name="author" content="Gabino Trejo Andrade">
-    <title>Tu Negocio de Productos</title>
+    <meta name="description" content="Explora nuestra amplia gama de productos. Encuentra lo que necesitas a precios accesibles.">
+    <meta name="keywords" content="productos, compras en línea, tienda en línea, entrega rápida, precios accesibles">
+    <meta name="author" content="Tu Nombre">
+    <title>Productos - Tu Negocio de Productos</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="css/imagenes/logo.jpeg" alt="Logo de Track Limit" class="responsive-logo">
+            <img src="css/imagenes/logo.jpeg" alt="Logo de Tu Negocio">
         </div>
         <nav>
             <ul>
-                <li><a href="index.html" aria-label="Ir al Inicio">Inicio</a></li>
-                <li><a href="productos.html" aria-label="Ver productos">Productos</a></li>
-                <li><a href="#" aria-label="Saber más sobre nosotros">Nosotros</a></li>
-                <li><a href="#" aria-label="Contactarnos">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
     </header>
-
+    
     <main>
-        <section class="hero">
-            <div class="carousel">
-                <img class="active" src="css/imagenes/ferrari 1.jpeg" alt="Promoción 1" loading="lazy">
-                <img src="css/imagenes/frente.jpeg" alt="Promoción 2" loading="lazy">
-                <img src="css/imagenes/mclaren_carusel.jpeg" alt="Promoción 3" loading="lazy">
-                <img src="css/imagenes/mclaren frente.jpeg" alt="Promoción 4" loading="lazy">
+        <section class="products">
+            <h2>Todos los Productos</h2>
+            <div class="product-grid">
+                <!-- Producto 1 -->
+                <div class="product">
+                    <div class="product-images">
+                        <img src="css/imagenes/frente.jpeg" alt="Producto 1 - Principal" class="thumbnail" onclick="openModal(this)">
+                        <div class="product-images">
+                            <img src="css/imagenes/frente reverso.jpeg" alt="Producto 1 - Detalle 1" class="thumbnail" onclick="openModal(this)">
+                            <img src="css/imagenes/taparosca.jpeg" alt="Producto 1 - Detalle 2" class="thumbnail" onclick="openModal(this)">
+                        </div>
+                    </div>
+                    <h3>Producto 1</h3>
+                    <p>Descripción detallada del producto 1.</p>
+                    <p>$10.00</p>
+                    <button>Comprar</button>
+                </div>
+        
+                <!-- Producto 2 -->
+                <div class="product">
+                    <div class="product-images">
+                        <img src="producto2_main.jpg" alt="Producto 2 - Principal" class="main-image">
+                        <div class="thumbnails">
+                            <img src="producto2_1.jpg" alt="Producto 2 - Detalle 1" class="thumbnail">
+                            <img src="producto2_2.jpg" alt="Producto 2 - Detalle 2" class="thumbnail">
+                            <img src="producto2_3.jpg" alt="Producto 2 - Detalle 3" class="thumbnail">
+                        </div>
+                    </div>
+                    <h3>Producto 2</h3>
+                    <p>Descripción detallada del producto 2.</p>
+                    <p>$20.00</p>
+                    <button>Comprar</button>
+                </div>
+        
+                <!-- Producto 3 -->
+                <div class="product">
+                    <div class="product-images">
+                        <img src="producto3_main.jpg" alt="Producto 3 - Principal" class="main-image">
+                        <div class="thumbnails">
+                            <img src="producto3_1.jpg" alt="Producto 3 - Detalle 1" class="thumbnail">
+                            <img src="producto3_2.jpg" alt="Producto 3 - Detalle 2" class="thumbnail">
+                            <img src="producto3_3.jpg" alt="Producto 3 - Detalle 3" class="thumbnail">
+                        </div>
+                    </div>
+                    <h3>Producto 3</h3>
+                    <p>Descripción detallada del producto 3.</p>
+                    <p>$30.00</p>
+                    <button>Comprar</button>
+                </div>
+        
+                <!-- Producto 4 -->
+                <div class="product">
+                    <div class="product-images">
+                        <img src="producto4_main.jpg" alt="Producto 4 - Principal" class="main-image">
+                        <div class="thumbnails">
+                            <img src="producto4_1.jpg" alt="Producto 4 - Detalle 1" class="thumbnail">
+                            <img src="producto4_2.jpg" alt="Producto 4 - Detalle 2" class="thumbnail">
+                            <img src="producto4_3.jpg" alt="Producto 4 - Detalle 3" class="thumbnail">
+                        </div>
+                    </div>
+                    <h3>Producto 4</h3>
+                    <p>Descripción detallada del producto 4.</p>
+                    <p>$40.00</p>
+                    <button>Comprar</button>
+                </div>
+        
+                <!-- Producto 5 -->
+                <div class="product">
+                    <div class="product-images">
+                        <img src="producto5_main.jpg" alt="Producto 5 - Principal" class="main-image">
+                        <div class="thumbnails">
+                            <img src="producto5_1.jpg" alt="Producto 5 - Detalle 1" class="thumbnail">
+                            <img src="producto5_2.jpg" alt="Producto 5 - Detalle 2" class="thumbnail">
+                            <img src="producto5_3.jpg" alt="Producto 5 - Detalle 3" class="thumbnail">
+                        </div>
+                    </div>
+                    <h3>Producto 5</h3>
+                    <p>Descripción detallada del producto 5.</p>
+                    <p>$50.00</p>
+                    <button>Comprar</button>
+                </div>
+        
+                <!-- Producto 6 -->
+                <div class="product">
+                    <div class="product-images">
+                        <img src="producto6_main.jpg" alt="Producto 6 - Principal" class="main-image">
+                        <div class="thumbnails">
+                            <img src="producto6_1.jpg" alt="Producto 6 - Detalle 1" class="thumbnail">
+                            <img src="producto6_2.jpg" alt="Producto 6 - Detalle 2" class="thumbnail">
+                            <img src="producto6_3.jpg" alt="Producto 6 - Detalle 3" class="thumbnail">
+                        </div>
+                    </div>
+                    <h3>Producto 6</h3>
+                    <p>Descripción detallada del producto 6.</p>
+                    <p>$60.00</p>
+                    <button>Comprar</button>
+                </div>
             </div>
         </section>
 
-        <section class="testimonials">
-            <h2>Testimonios de Clientes</h2>
-            <div class="testimonial">
-                <blockquote>
-                    <p>"Excelente servicio y productos de alta calidad. ¡Muy recomendable!"</p>
-                    <cite>- Cliente Satisfecho</cite>
-                </blockquote>
-            </div>
-            <div class="testimonial">
-                <blockquote>
-                    <p>"La entrega fue rápida y el producto llegó en perfectas condiciones."</p>
-                    <cite>- Cliente Feliz</cite>
-                </blockquote>
-            </div>
-        </section>
+        <!-- Modal de zoom de imagen -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
 
-        <section class="contact">
-            <h2>Contacto</h2>
-            <form>
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+<!-- Modal -->
+<div id="myModal" class="modal" style="display:none;">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="img01">
+</div>
 
+        
     <footer>
         <p>&copy; 2024 Tu Negocio de Productos. Todos los derechos reservados.</p>
         <div class="social-media">
-            <a href="#" aria-label="Visítanos en Facebook">Facebook</a>
-            <a href="#" aria-label="Visítanos en Instagram">Instagram</a>
-            <a href="#" aria-label="Visítanos en Twitter">Twitter</a>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
         </div>
     </footer>
 
     <script src="js/scripts.js"></script>
-
-    <script>
-        // Función para abrir el modal con la imagen ampliada
-        function openModal(imageSrc) {
-            const modal = document.getElementById("productModal");
-            const modalImage = document.getElementById("modalImage");
-            modalImage.src = imageSrc;
-            modal.style.display = "flex";
-        }
-
-        // Función para cerrar el modal
-        function closeModal() {
-            const modal = document.getElementById("productModal");
-            modal.style.display = "none";
-        }
-    </script>
 </body>
 </html>
