@@ -481,4 +481,23 @@ footer {
     padding-top: 20px;
     border-top: 1px solid #444;
     font-size: 0.8em;
+
+}
+
+/* --- REFINAMIENTOS FINALES --- */
+
+/* Mejora visual para la imagen principal del producto */
+.main-product-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.main-product-image:hover {
+    transform: scale(1.05); /* Agranda la imagen ligeramente al pasar el mouse */
+}
+
+/* Ajuste al título de la sección de productos para consistencia */
+.products h2 {
+    color: #333; /* Un color más sobrio y legible */
+    font-weight: bold;
 }
